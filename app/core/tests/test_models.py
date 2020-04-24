@@ -45,4 +45,9 @@ class ModelTests(TestCase) :
             name = 'Vegen'
         )
         self.assertEqual(str(tag) , tag.name)
-        
+    def test_create_ingredient(self) : 
+        ing = models.Ingredients.objects.create(
+            user = sample_user() , 
+            name = 'fjifjdn'
+        )
+        self.assertEqual(str(ing), ing.name)

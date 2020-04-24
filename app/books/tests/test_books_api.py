@@ -64,5 +64,3 @@ class PrivateTagsApiTests(TestCase) :
         payload = {'name' : ''}
         res = self.client.post(TAGS_URL , payload)
         self.assertEqual(res.status_code , 400)
-        
-        
